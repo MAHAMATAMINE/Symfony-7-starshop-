@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Starshop: BEAM up some parts!
+{% endblock %}
+
+{% block body %}
+
+	<h1>
+		<strong>Starshop</strong>:your monopoly-blusting option for Starship parts!
+	</h1>
+
+
+	<div>
+		Browse Through
+		{{ numberOfStarships }}
+		starships
+
+		{% if numberOfStarships > 400 %}
+			<p>
+
+				That's alot
+			</p>
+
+		{% endif %}
+	</div>
+
+	<div>
+		<h2>My ship
+		</h2>
+
+		<table>
+			<tr>
+				<th>Name</th>
+				<td>{{myShip.name}}</td>
+			</tr>
+
+			<tr>
+				<th>Class</th>
+				<td>{{myShip.class}}</td>
+			</tr>
+
+			<tr>
+				<th>Captain</th>
+				<td>{{myShip.captain}}</td>
+			</tr>
+
+			<tr>
+				<th>Status</th>
+				<td>{{myShip.status}}</td>
+			</tr>
+		</table>
+	</div>
+
+{% endblock %}
